@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Synthwave theme colors
+				synthwave: {
+					pink: '#ff008c',
+					black: '#000000',
+					teal: '#00e7ff',
+					purple: '#4B0082',
+					darkPurple: '#1A0B2E'
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,48 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'grid-scroll': {
+					'0%': {
+						transform: 'translateY(0)'
+					},
+					'100%': {
+						transform: 'translateY(40px)'
+					}
+				},
+				'neon-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px #ff008c, 0 0 10px #ff008c, 0 0 15px #ff008c'
+					},
+					'50%': {
+						boxShadow: '0 0 10px #ff008c, 0 0 20px #ff008c, 0 0 30px #ff008c'
+					}
+				},
+				'pad-press': {
+					'0%': {
+						transform: 'scale(1)',
+						boxShadow: '0 0 10px #ff008c'
+					},
+					'50%': {
+						transform: 'scale(0.95)',
+						boxShadow: '0 0 20px #ff008c, inset 0 0 20px rgba(255, 0, 140, 0.3)'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						boxShadow: '0 0 10px #ff008c'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'grid-scroll': 'grid-scroll 8s linear infinite',
+				'neon-glow': 'neon-glow 2s ease-in-out infinite',
+				'pad-press': 'pad-press 0.2s ease-out'
+			},
+			fontFamily: {
+				'press-start': ['"Press Start 2P"', 'monospace'],
+				'roboto': ['Roboto', 'sans-serif']
 			}
 		}
 	},
